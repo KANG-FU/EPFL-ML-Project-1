@@ -7,10 +7,10 @@ Structure.
 The project has been developed by Jupyter and tested with Python 3.6. In this project, the library  `matplotlib` for visualization and `NumPy` for matrix computation are mainly used. In order to reduplicate my result, please install the Python, Juputer and the relating library beforehand.
 
 ## Structure
-- feature_distribution.ipynb: this jupyper notebook provides the feature distributions in the form of histogram. 
+- feature_distribution.ipynb: this jupyper notebook provides the **feature distributions in the form of histogram**. 
 - project1_helpers.py: contains some helper functions for project 1 like functions to load the data and create the submission file.
-- data_reprocess.py: contains the methods to preprocess the data, including remove outliers and standardization.
-- cross_validation.py: cross validation for ridge regression with feature augmentation model
+- data_reprocess.py: contains the methods to preprocess the data, including **remove outliers and standardization**.
+- cross_validation.py: **10-fold cross validation** for ridge regression with feature augmentation model
 - implementations.py: contains all the function of implementations required by the project.
 - test_six_methods.py: this script is used to test the implementation by calling it from implementations.py.
 - test_implementation.ipynb: this jupyper notebook is used to test the implementation and tune the parameters.
