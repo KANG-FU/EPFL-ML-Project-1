@@ -29,4 +29,4 @@ The project has been developed by Jupyter and tested with Python 3.6. In this pr
 8. Saving results to ridge_regression_output.csv
 
 ## How to reproduce our results
-Download and extract all the file. Just execute the run.py
+Download and extract all the files. Just execute the run.py and wait for the ridge_regression_output.csv generated in the same folder.
