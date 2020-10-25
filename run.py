@@ -23,23 +23,19 @@ tx_test = replace_999_by_median(tx_test)
 standardized_tx_train, mean_tx_train, std_tx_train = standardize(tX)
 standardized_tx_test, mean_tx_test, std_tx_test = standardize(tx_test)
 
+# generate a polynomial basis od degree 12 to extend the features
+tx_train = build_poly(standardized_tx_train, 12)   
+standardized_tx_test = build_poly(standardized_tx_test,12)
 
 def ridge_regression_with_feature_augmentation(y_train, tx_train, degree):
-    # generate a polynomial basis for train data to extend the features
-    tx_train = build_poly(tx_train, degree)
 
     # do the riidge regression and compute the accuracy of the model
     w, loss = ridge_regression(y_train, tx_train, 0.004)
     accu_train = accuracy(y_train, tx_train, w)
-    print('The train accuracy of ridge regression model is {accuracy}'.format(accuracy=accu_train))
-    
+    print('The train accuracy of ridge regression model is {accuracy}'.format(accuracy=accu_train))    
     return w
-                       
-                       
-w = ridge_regression_with_feature_augmentation(y, standardized_tx_train,12)
-
-#  generate a polynomial basis for test data to extend the features
-standardized_tx_test = build_poly(tx_test,15)
+                                             
+w = ridge_regression_with_feature_augmentation(y, tx_train,12)
 
 # generate predictions of testset
 y_pred = predict_labels(w, standardized_tx_test)
