@@ -19,5 +19,12 @@ The project has been developed by Jupyter and tested with Python 3.6. In this pr
 - test.csv: the testing data
 - README.md: this file :)
 
-
+## What the run.py does
+1. Loading data
+2. Replaceing missing features(-999) with median values of that feature
+3. Standardise the data 
+4. Add a polynomial basis of degree 12
+5. Define a funcation to establish the model. In that function, do the ridge regression. The training accuracy will be computed.
+6. Call the function to get the optimal weights. Training Ridge Regression with lambda=0.004.
+8. Saving results to ridge_regression_output.csv
 
