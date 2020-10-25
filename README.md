@@ -28,3 +28,5 @@ The project has been developed by Jupyter and tested with Python 3.6. In this pr
 6. Call the function to get the optimal weights. Training Ridge Regression with lambda=0.004.
 8. Saving results to ridge_regression_output.csv
 
+## How to reproduce our results
+Download and extract all the file. Just execute the run.py
