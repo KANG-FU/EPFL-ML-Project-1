@@ -12,7 +12,7 @@ The project has been developed by Jupyter and tested with Python 3.6. In this pr
 - data_reprocess.py: contains the methods to preprocess the data, including **remove outliers and standardization**.
 - cross_validation.py: **10-fold cross validation** for ridge regression with feature augmentation model. This script contains all the functions needed. The implemenation can be found in test_implementation.ipynb.
 - implementations.py: contains all the function of implementations required by the project.
-- test_six_methods.py: this script is used to test the implementation by calling it from implementations.py.
+- test_six_methods.py: this script is used to test the implementation by calling it from implementations.py. This script will output the results.
 - test_implementation.ipynb: this jupyper notebook is used to test the implementation and tune the parameters using cross validation.
 - run.py: contains the selected model to train the model and can get the submission file.
 - train.csv: the training data
