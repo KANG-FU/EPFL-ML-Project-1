@@ -4,7 +4,7 @@ This repository contains all the files used in the first project of [Maching Lea
 This project is to deal with the actual CERN particle accelerator data, using Machine Learning algorithms to determine whether an event is a signal or background of Higgs boson.
 Structure.
 
-The project has been developed by Jupyter and tested with Python 3.6. In this project, the library  `matplotlib` for visualization and `NumPy` for matrix computation are mainly used. In order to reduplicate my result, please install the Python, Juputer and the relating library beforehand.
+The project has been developed by Jupyter and tested with Python 3.6. In this project, the library  `matplotlib` for visualization and `NumPy` for matrix computation are mainly used. In order to reduplicate my result, please install the Python, Jupyter and the relating library beforehand.
 
 ## Structure
 - feature_distribution.ipynb: this jupyper notebook provides the **feature distributions in the form of histogram**. 
