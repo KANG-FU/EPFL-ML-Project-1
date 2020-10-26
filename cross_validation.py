@@ -76,7 +76,6 @@ def best_degree_selection(y, x, degrees, k_fold, lambdas, seed = 1):
                 train_acc, test_acc,w = cross_validation(y, x, k_indices, k, lambda_, degree)
                 accu_te_tmp.append(test_acc)
             accu_te.append(np.mean(accu_te_tmp))
-            print("test")
         ind_lambda_opt = np.argmax(accu_te)
         best_lambdas.append(lambdas[ind_lambda_opt])
         best_accu.append(accu_te[ind_lambda_opt])
@@ -86,7 +85,7 @@ def best_degree_selection(y, x, degrees, k_fold, lambdas, seed = 1):
     return degrees[ind_best_degree]
 
 
-def cross_validation_visualization(lambds, accu_tr, accu_te):
+def cross_validation_visualization_accuracy(lambds, accu_tr, accu_te):
     """visualization the curves of train accuracy and test accuracy."""
     plt.semilogx(lambds, accu_tr, marker=".", color='b', label='train accu')
     plt.semilogx(lambds, accu_te, marker=".", color='r', label='test accu')
@@ -95,7 +94,17 @@ def cross_validation_visualization(lambds, accu_tr, accu_te):
     plt.title("cross validation")
     plt.legend(["accu_tr","accu_te"],loc="upper right")
     plt.grid(True)
-    plt.savefig("cross_validation")
+    plt.savefig("cross_validation_accuracy")
 
+def cross_validation_visualization_loss(degree, mse_tr, mse_te):
+    """visualization the curves of train loss and test loss."""
+    plt.semilogx(degree, mse_tr, marker=".", color='b', label='mse_tr')
+    plt.semilogx(degree, mse_te, marker=".", color='r', label='mse_te')
+    plt.xlabel("degree")
+    plt.ylabel("Loss")
+    plt.title("cross validation of degree 12")
+    plt.legend(["mse_tr","mse_te"],loc="upper right")
+    plt.grid(True)
+    plt.savefig("cross_validation_loss")
 
             
