@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This is the cross validation for ridge regression with feature augmentation model.
+This is a script containing functions used in the cross validation for ridge regression with feature augmentation model.
 """
 
 import numpy as np
